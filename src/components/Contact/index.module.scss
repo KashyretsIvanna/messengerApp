@@ -1,0 +1,35 @@
+$border_gray: rgb(170, 167, 167);
+$background_dark_gray: rgb(221, 235, 235);
+$background_light_gray: rgb(245, 251, 253);
+$mymessages_gray: rgb(209, 223, 224);
+$myfriend_gray: rgb(79, 78, 78);
+$font_fam: georgia, 'Times New Roman', Times, serif;
+
+.user_cart {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid $border_gray;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.text {
+  margin-left: 10px;
+}
+
+.time {
+  position: absolute;
+  right: 20px;
+  top: 0px;
+}

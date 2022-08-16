@@ -1,0 +1,71 @@
+$border_gray: rgb(170, 167, 167);
+$background_dark_gray: rgb(221, 235, 235);
+$background_light_gray: rgb(245, 251, 253);
+$mymessages_gray: rgb(209, 223, 224);
+$myfriend_gray: rgb(79, 78, 78);
+$font_fam: georgia, 'Times New Roman', Times, serif;
+$font_size_large: 30px;
+$font_size_small: 20px;
+
+.container {
+  width: 70vw;
+  height: 100vh;
+  background-color: $background_dark_gray;
+}
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  box-sizing: border-box;
+  padding: 10px;
+  font-family: $font_fam;
+  font-size: $font_size_large;
+  border-bottom: 1px solid $border_gray;
+  height: 10vh;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.body {
+  width: 100%;
+  border-bottom: 1px solid $border_gray;
+  height: calc(78vh - 2px);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12vh;
+}
+
+.sent {
+  width: 80%;
+  padding: 0 20px;
+  height: 35px;
+  border: none;
+  background-color: $background_light_gray;
+  border-radius: 20px;
+  color: gray;
+  font-family: $font_fam;
+}
+
+.sent_btn {
+  position: relative;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border: 50%;
+  left: -30px;
+  background-image: url(../../images/sent.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 50%;
+}

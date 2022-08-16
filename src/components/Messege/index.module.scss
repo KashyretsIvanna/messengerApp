@@ -1,0 +1,75 @@
+$border_gray: rgb(170, 167, 167);
+$background_dark_gray: rgb(221, 235, 235);
+$background_light_gray: rgb(245, 251, 253);
+$mymessages_gray: rgb(209, 223, 224);
+$myfriend_gray: rgb(79, 78, 78);
+$font_fam: georgia, 'Times New Roman', Times, serif;
+$font_size_large: 30px;
+$font_size_small: 20px;
+
+.message_cart {
+  padding: 30px;
+}
+
+.message_body {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+.message {
+  font-size: 20px;
+  font-family: $font_fam;
+  background-color: $myfriend_gray;
+  border-radius: 50px;
+  color: white;
+  width: auto;
+  padding: 15px;
+  font-size: 20px;
+  font-family: $font_fam;
+  margin-left: 10px;
+}
+
+.date {
+  font-size: 20px;
+  color: gray;
+  font-family: $font_fam;
+  margin-left: 75px;
+}
+
+.message_body_my {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.message_my {
+  font-size: 20px;
+  font-family: $font_fam;
+  background-color: $mymessages_gray;
+  border-radius: 50px;
+  color: black;
+  width: auto;
+  padding: 15px;
+  font-size: 20px;
+  font-family: $font_fam;
+  margin-right: 10px;
+}
+
+.date_my {
+  font-size: 20px;
+  color: gray;
+  font-family: $font_fam;
+  margin-right: 75px;
+}
+
+.message_cart_my {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
