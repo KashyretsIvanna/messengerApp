@@ -1,11 +1,22 @@
 import styles from '../Contacts/index.module.scss';
 import { useSelector } from 'react-redux';
 import Contact from 'components/Contact';
-
+import { useState } from 'react';
+import { useDispatch } from 'react-redux/es/hooks/useDispatch';
+import * as actions from '../../redux/actions';
+import React from 'react';
+import { useEffect } from 'react';
 
 const Contacts = () => {
-  let contacts = useSelector(state => state.contactReducer);
+  const [input, setInput] = useState('');
+  const dispatch = useDispatch();
+  console.log(input);
 
+  useEffect(() => {
+    dispatch(actions.filterContacts(input));
+  }, [input, dispatch]);
+
+  let contacts = useSelector(state => state.contactReducer.filtered);
   return (
     <div className={styles.sidebar}>
       <div className={styles.header}>
@@ -17,13 +28,18 @@ const Contacts = () => {
         <input
           placeholder="Search or start new chat"
           className={styles.filter}
+          value={input}
+          onChange={e => {
+            setInput(e.target.value);
+          }}
           type="text"
         />
       </div>
       <div className={styles.chats}>
         Chats
-        {/* {contacts.forEach(el=>console.log(el))} */}
-        {contacts.map(el=><Contact key={el.id} user={el}/>)}
+        {contacts.map(el => (
+          <Contact key={el.id} user={el} />
+        ))}
       </div>
     </div>
   );

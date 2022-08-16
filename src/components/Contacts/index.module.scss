@@ -29,7 +29,7 @@ $font_fam: georgia, 'Times New Roman', Times, serif;
 
 .filter {
   margin-top: 10px;
-  width: 100%;
+  width: 80%;
   height: 30px;
   background-color: $background_light_gray;
   border-radius: 20px;
@@ -38,6 +38,8 @@ $font_fam: georgia, 'Times New Roman', Times, serif;
   background-position: 10px;
   background-size: 20px;
   background-repeat: no-repeat;
+  padding: 0 30px;
+  font-family: $font_fam;
 }
 
 input::placeholder {
