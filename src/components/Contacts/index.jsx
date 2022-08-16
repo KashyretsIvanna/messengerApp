@@ -1,7 +1,5 @@
 import styles from '../Contacts/index.module.scss';
 import { useSelector } from 'react-redux';
-// import { useDispatch } from "react-redux"
-import { Routes, Route } from 'react-router-dom';
 import Contact from 'components/Contact';
 
 

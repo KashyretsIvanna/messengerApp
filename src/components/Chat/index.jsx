@@ -11,7 +11,7 @@ const Chat = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <img className={styles.logo} src={user.avatar}></img>
+        <img className={styles.logo} alt="" src={user.avatar}></img>
         {user.name}
       </div>
       <div className={styles.body}>

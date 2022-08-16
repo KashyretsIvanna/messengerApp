@@ -7,7 +7,7 @@ const Message = ({ messages, avatar }) => {
 
   return (
     <div className={styles.message_cart}>
-      {property == 'friend' && (
+      {property === 'friend' && (
         <>
           <div className={styles.message_body}>
             <img src={avatar} alt="" />
@@ -16,7 +16,7 @@ const Message = ({ messages, avatar }) => {
           <div className={styles.date}>{time}</div>
         </>
       )}
-      {property == 'my' && (
+      {property === 'my' && (
         <>
           <div className={styles.message_body_my}>
             <div className={styles.message_my}>{message}</div>
