@@ -30,6 +30,9 @@ $font_fam: georgia, 'Times New Roman', Times, serif;
 
 .time {
   position: absolute;
+  color: $border_gray;
+  font-family: $font_fam;
+  font-size: 15px;
   right: 20px;
   top: 0px;
 }

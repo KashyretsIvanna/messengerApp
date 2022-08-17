@@ -2,7 +2,7 @@ import styles from '../Messege/index.module.scss';
 
 const Message = ({ messages, avatar }) => {
   let message = messages.messege;
-  let time = messages.time;
+  let time = messages.hours;
   let property = messages.proprety;
 
   return (

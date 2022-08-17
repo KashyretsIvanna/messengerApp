@@ -35,6 +35,7 @@ $font_size_small: 20px;
   width: 100%;
   border-bottom: 1px solid $border_gray;
   height: calc(78vh - 2px);
+  overflow:auto;
 }
 
 .footer {

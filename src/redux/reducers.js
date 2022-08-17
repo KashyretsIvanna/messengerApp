@@ -53,6 +53,20 @@ const contactReducer = createReducer(INITIALSTATE, {
       ),
     ],
   }),
+  [actions.sentMessage.type]: (state, action) => ({
+    ...state,
+    contacts: [
+      {
+        ...state.contacts.filter(el => el.id === action.payload.id)[0],
+        messeges: [
+          ...state.contacts.filter(el => el.id === action.payload.id)[0]
+            .messeges,
+          action.payload.mess,
+        ],
+      },
+      ...state.contacts.filter(el => el.id !== action.payload.id),
+    ],
+  }),
 });
 
-export default  contactReducer;
+export default contactReducer;

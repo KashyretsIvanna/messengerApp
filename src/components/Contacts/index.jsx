@@ -10,12 +10,14 @@ import { useEffect } from 'react';
 const Contacts = () => {
   const [input, setInput] = useState('');
   const dispatch = useDispatch();
+  let contacts = useSelector(state => state.contactReducer.filtered);
+
 
   useEffect(() => {
     dispatch(actions.filterContacts(input));
+
   }, [input, dispatch]);
 
-  let contacts = useSelector(state => state.contactReducer.filtered);
   return (
     <div className={styles.sidebar}>
       <div className={styles.header}>
