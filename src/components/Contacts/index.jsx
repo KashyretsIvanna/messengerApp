@@ -10,7 +10,6 @@ import { useEffect } from 'react';
 const Contacts = () => {
   const [input, setInput] = useState('');
   const dispatch = useDispatch();
-  console.log(input);
 
   useEffect(() => {
     dispatch(actions.filterContacts(input));
