@@ -8,37 +8,35 @@ const Chat = () => {
   const location = useLocation();
   return (
     <>
-      {location.state && (
-        <div className={styles.container}>
-          <div className={styles.header}>
-            <img
-              className={styles.logo}
-              alt=""
-              src={location.state.user.avatar}
-            ></img>
-            {location.state.user.name}
-          </div>
-          <div className={styles.body}>
-            {location.state.user.messeges.map(el => (
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <img
+            className={styles.logo}
+            alt=""
+            src={location.state && location.state.user.avatar}
+          ></img>
+          {location.state && location.state.user.name}
+        </div>
+        <div className={styles.body}>
+          {location.state &&
+            location.state.user.messeges.map(el => (
               <Message
-                avatar={location.state.user.avatar}
+                avatar={location.state && location.state.user.avatar}
                 key={el.id}
                 myavatar={myavatar}
                 messages={el}
               />
             ))}
-          </div>
-          <form className={styles.footer}>
-            <input
-              placeholder="Type your message"
-              className={styles.sent}
-              type="text"
-            />
-            <button className={styles.sent_btn}></button>
-          </form>
         </div>
-      )}
-      {!location.state && <p>Select a user</p>}
+        <form className={styles.footer}>
+          <input
+            placeholder="Type your message"
+            className={styles.sent}
+            type="text"
+          />
+          <button className={styles.sent_btn}></button>
+        </form>
+      </div>
     </>
   );
 };
