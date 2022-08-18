@@ -10,7 +10,8 @@ import { useEffect } from 'react';
 const Contacts = () => {
   const [input, setInput] = useState('');
   const dispatch = useDispatch();
-  let contacts = useSelector(state => state.contactReducer.filtered);
+  let contacts = useSelector(state => state.persistedReducer.filtered);
+  console.log(contacts)
 
   useEffect(() => {
     dispatch(actions.filterContacts(input));

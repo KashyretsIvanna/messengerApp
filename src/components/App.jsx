@@ -1,7 +1,11 @@
 import Contacts from './Contacts';
 import Chat from './Chat';
+import { useSelector } from 'react-redux';
 
 export const App = () => {
+  const state=useSelector(state=>state)
+  console.log(state)
+
   return (
     <div
       style={{
@@ -13,7 +17,7 @@ export const App = () => {
       }}
     >
 
-      
+
       <Contacts />
       <Chat/>
     </div>

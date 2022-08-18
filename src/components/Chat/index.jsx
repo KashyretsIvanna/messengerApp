@@ -12,7 +12,7 @@ const Chat = () => {
   const dispatch = useDispatch();
   const objDiv = document.querySelector(styles.body);
 
-  let users = useSelector(state => state.contactReducer.filtered);
+  let users = useSelector(state => state.persistedReducer.filtered);
   let myavatar =
     'https://i.pinimg.com/564x/87/7e/47/877e4704f794b9537f116ad97a8df9b3.jpg';
   const location = useLocation();
