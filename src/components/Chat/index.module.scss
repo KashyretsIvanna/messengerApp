@@ -12,6 +12,7 @@ $font_size_small: 20px;
   height: 100vh;
   background-color: $background_dark_gray;
 }
+
 .header {
   width: 100%;
   display: flex;
@@ -68,7 +69,6 @@ $font_size_small: 20px;
   border: none;
   width: 20px;
   height: 20px;
-  border: 50%;
   left: -30px;
   background-image: url(../../images/sent.png);
   background-position: center;
