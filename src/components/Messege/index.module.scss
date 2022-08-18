@@ -33,6 +33,7 @@ img {
   font-size: 20px;
   font-family: $font_fam;
   margin-left: 10px;
+  max-width: 70%;
 }
 
 .date {
@@ -49,6 +50,9 @@ img {
 }
 
 .message_my {
+  word-wrap: break-word;
+  max-width: 70%;
+
   font-size: 20px;
   font-family: $font_fam;
   background-color: $mymessages_gray;

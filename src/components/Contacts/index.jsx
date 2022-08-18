@@ -12,10 +12,8 @@ const Contacts = () => {
   const dispatch = useDispatch();
   let contacts = useSelector(state => state.contactReducer.filtered);
 
-
   useEffect(() => {
     dispatch(actions.filterContacts(input));
-
   }, [input, dispatch]);
 
   return (

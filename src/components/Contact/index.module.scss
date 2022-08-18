@@ -5,6 +5,11 @@ $mymessages_gray: rgb(209, 223, 224);
 $myfriend_gray: rgb(79, 78, 78);
 $font_fam: georgia, 'Times New Roman', Times, serif;
 
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 .user_cart {
   display: flex;
   align-items: center;
@@ -25,7 +30,10 @@ $font_fam: georgia, 'Times New Roman', Times, serif;
 }
 
 .text {
+  height: 100%;
   margin-left: 10px;
+  // overflow: hidden;
+  word-wrap: break-word;
 }
 
 .time {
@@ -34,5 +42,14 @@ $font_fam: georgia, 'Times New Roman', Times, serif;
   font-family: $font_fam;
   font-size: 15px;
   right: 20px;
-  top: 0px;
+  top: 10px;
+}
+
+.user_message {
+  margin-top: 10px;
+  height: 50px;
+  word-wrap: break-word;
+}
+.name {
+  height: 20px;
 }
