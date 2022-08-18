@@ -12,6 +12,8 @@ export const App = () => {
         color: '#010101',
       }}
     >
+
+      
       <Contacts />
       <Chat/>
     </div>

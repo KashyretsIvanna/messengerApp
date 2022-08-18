@@ -11,7 +11,6 @@ const Chat = () => {
   const [input, setInput] = useState('');
   const dispatch = useDispatch();
   const objDiv = document.querySelector(styles.body);
-  console.log(objDiv)
 
   let users = useSelector(state => state.contactReducer.filtered);
   let myavatar =
