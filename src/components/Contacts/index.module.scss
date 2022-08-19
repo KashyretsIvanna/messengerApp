@@ -42,16 +42,13 @@ $font_fam: georgia, 'Times New Roman', Times, serif;
   background-repeat: no-repeat;
   padding: 0 30px;
   font-family: $font_fam;
-  position: relative;
 }
 
 input::placeholder {
-  position: absolute;
-  left: 40px;
-  top: 3px;
-  vertical-align: middle;
+  position: relative;
+  left: 30px;
   color: gray;
-  font-size: 20px;
+  font-size: 1.2em;
   font-style: italic;
 }
 

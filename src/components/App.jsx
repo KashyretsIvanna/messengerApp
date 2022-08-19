@@ -1,47 +1,39 @@
 import Contacts from './Contacts';
 import Chat from './Chat';
-// import Login from './Login/Login';
-// import Logout from './Login/Logout';
-import { Fragment } from 'react';
-import '../components/App.css';
-// import { useState } from 'react';
+// import { useEffect } from 'react';
+// import jwt_decode from 'jwt-decode';
 
 export const App = () => {
-  // const author = useSelector(state => state.persistedReducer.author);
-  // console.log(author)
-
-
-
-  // const [author, setAuthor] = useState(null);
-  // const getResponse = response => {
-  //   setAuthor(response);
-  // };
-  // console.log(author);
-
+  // function handleCredentialResponse(response) {
+  //   console.log(jwt_decode(response.credential));
+  // }
+  
+  // useEffect(() => {
+  //   google.accounts.id.initialize({
+  //     client_id:
+  //       '71848933982-fg672e4995svgotpfiko6moelsbjooc7.apps.googleusercontent.com',
+  //     callback: handleCallbackResponse,
+  //   });
+  //   google.accounts.id.renderButton(document.getElementById('signin'), {
+  //     theme: 'outline',
+  //     size: 'large',
+  //   });
+  //   // google.accounts.id.propmpt();
+  // }, []);
   return (
-    <Fragment>
-      <div
-        style={{
-          height: '100vh',
-          width: '100vw',
-          display: 'flex',
-          fontSize: 40,
-          color: '#010101',
-        }}
-      >
-        {/* {author !== null && (
-          <> */}
-            <Contacts />
-            <Chat />
-          {/* </>
-        )} */}
-      </div>
-      {/* {!author && (
-        <div className="login">
-          <Login getResponse={getResponse} />
-        </div>
-      )}
-      {author && <Logout getResponse={getResponse} />} */}
-    </Fragment>
+    <div
+      style={{
+        height: '100vh',
+        width: '100vw',
+        display: 'flex',
+        fontSize: 40,
+        color: '#010101',
+      }}
+    >
+      {' '}
+      <div id="signin"></div>
+      <Contacts />
+      <Chat />
+    </div>
   );
 };
