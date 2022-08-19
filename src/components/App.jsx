@@ -4,10 +4,18 @@ import Login from './Login/Login';
 import Logout from './Login/Logout';
 import { Fragment } from 'react';
 import '../components/App.css';
-import GoogleLogin from 'react-google-login';
-
+import { useSelector } from 'react-redux';
+import { useState } from 'react';
 
 export const App = () => {
+  // const author = useSelector(state => state.persistedReducer.author);
+  // console.log(author)
+  const [author, setAuthor] = useState(null);
+  const getResponse = response => {
+    setAuthor(response);
+  };
+  console.log(author);
+
   return (
     <Fragment>
       <div
@@ -19,13 +27,19 @@ export const App = () => {
           color: '#010101',
         }}
       >
-        {/* <Contacts />
-      <Chat /> */}
+        {author !== null && (
+          <>
+            <Contacts />
+            <Chat />
+          </>
+        )}
       </div>
-      <div className="login">
-        <Login />
-        <Logout />
-      </div>
+      {!author && (
+        <div className="login">
+          <Login getResponse={getResponse} />
+        </div>
+      )}
+      {author && <Logout getResponse={getResponse} />}
     </Fragment>
   );
 };
