@@ -55,15 +55,25 @@ $font_size_small: 20px;
 
 .sent {
   width: 80%;
-  padding: 0 20px;
+  padding: 0px 20px;
   height: 35px;
   border: none;
   background-color: $background_light_gray;
   border-radius: 20px;
   color: gray;
   font-family: $font_fam;
+  text-align: center;
+  vertical-align: middle;
 }
 
+
+.sent::placeholder{
+  font-size: 20px;
+  display: inline;
+  line-height: 100%;
+  vertical-align: middle;
+
+}
 .sent_btn {
   position: relative;
   border: none;
