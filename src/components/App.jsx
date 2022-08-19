@@ -30,7 +30,6 @@ export const App = () => {
         color: '#010101',
       }}
     >
-      {' '}
       <div id="signin"></div>
       <Contacts />
       <Chat />
