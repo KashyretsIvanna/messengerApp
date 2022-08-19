@@ -1,7 +1,7 @@
 import React from 'react';
 import { GoogleLogout } from 'react-google-login';
-import { useDispatch } from 'react-redux';
-import * as actions from '../../redux/actions';
+// import { useDispatch } from 'react-redux';
+// import * as actions from '../../redux/actions';
 
 function Logout({getResponse}) {
 //   const dispatch = useDispatch();

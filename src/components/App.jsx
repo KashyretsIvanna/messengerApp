@@ -4,7 +4,6 @@ import Login from './Login/Login';
 import Logout from './Login/Logout';
 import { Fragment } from 'react';
 import '../components/App.css';
-import { useSelector } from 'react-redux';
 import { useState } from 'react';
 
 export const App = () => {
