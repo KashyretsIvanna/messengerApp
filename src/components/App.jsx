@@ -1,39 +1,31 @@
 import Contacts from './Contacts';
 import Chat from './Chat';
-// import { useEffect } from 'react';
-// import jwt_decode from 'jwt-decode';
+import Login from './Login/Login';
+import Logout from './Login/Logout';
+import { Fragment } from 'react';
+import '../components/App.css';
+import GoogleLogin from 'react-google-login';
+
 
 export const App = () => {
-  // function handleCredentialResponse(response) {
-  //   console.log(jwt_decode(response.credential));
-  // }
-  
-  // useEffect(() => {
-  //   google.accounts.id.initialize({
-  //     client_id:
-  //       '71848933982-fg672e4995svgotpfiko6moelsbjooc7.apps.googleusercontent.com',
-  //     callback: handleCallbackResponse,
-  //   });
-  //   google.accounts.id.renderButton(document.getElementById('signin'), {
-  //     theme: 'outline',
-  //     size: 'large',
-  //   });
-  //   // google.accounts.id.propmpt();
-  // }, []);
   return (
-    <div
-      style={{
-        height: '100vh',
-        width: '100vw',
-        display: 'flex',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
-      {' '}
-      <div id="signin"></div>
-      <Contacts />
-      <Chat />
-    </div>
+    <Fragment>
+      <div
+        style={{
+          height: '100vh',
+          width: '100vw',
+          display: 'flex',
+          fontSize: 40,
+          color: '#010101',
+        }}
+      >
+        {/* <Contacts />
+      <Chat /> */}
+      </div>
+      <div className="login">
+        <Login />
+        <Logout />
+      </div>
+    </Fragment>
   );
 };
