@@ -37,11 +37,15 @@ $font_size_small: 20px;
   border-bottom: 1px solid $border_gray;
   height: calc(78vh - 2px);
   overflow:scroll;
+  position: relative;
   
 }
 
 .body::-webkit-scrollbar {
   width: 0px;
+  position: absolute;
+  bottom: 0px;
+
 }
 
 
