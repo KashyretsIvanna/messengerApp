@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from '../Contact/index.module.scss';
 const Contact = ({ user }) => {
+  console.log(user)
   return (
     <Link
       style={{ color: 'black', textDecoration: 'none' }}

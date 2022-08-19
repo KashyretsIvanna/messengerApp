@@ -4,29 +4,41 @@ import { createReducer } from '@reduxjs/toolkit';
 const INITIALSTATE = {
   contacts: [
     {
-      id: '566876',
-      name: 'Andrej',
-      avatar:
-        'https://i.pinimg.com/564x/4b/fd/cc/4bfdcce76bdf2435971572ec6aa895ca.jpg',
-      messeges: [
-        { id: 'A456', messege: 'Hello', time: 'time', proprety: 'friend' },
-        {
-          id: 'A457',
-          messege: 'I was glad to see you',
-          time: 'time',
-          proprety: 'my',
-        },
-      ],
-    },
-    {
       id: '56676',
       name: 'Ann',
       avatar:
         'https://i.pinimg.com/564x/51/db/15/51db15d2d1bd03ecbcc0f1dfcac98bf3.jpg',
 
       messeges: [
-        { id: 'A456', messege: 'Hello', time: 'time', proprety: 'friend' },
-        { id: 'A457', messege: 'I am happy', time: 'time', proprety: 'my' },
+        {
+          id: '1',
+          messege: 'Hello , how are you today?',
+          time: '24 Feb, 2022',
+          hours: '01:01 PM',
+          proprety: 'my',
+        },
+        {
+          id: '2',
+          messege:
+            'I was relly glad to see you the last time! I am excited!How are you?',
+          time: '24 Feb, 2022',
+          hours: '01:01 PM',
+          proprety: 'friend',
+        },
+        {
+          id: '3',
+          messege: 'I am to!',
+          time: '24 Feb, 2022',
+          hours: '01:01 PM',
+          proprety: 'my',
+        },
+        {
+          id: '4',
+          messege: 'I am looking forward to hearing from you',
+          time: '24 Feb, 2022',
+          hours: '01:01 PM',
+          proprety: 'my',
+        },
       ],
     },
     {
@@ -36,8 +48,110 @@ const INITIALSTATE = {
         'https://i.pinimg.com/564x/6b/7a/5c/6b7a5cf25640c59c06df69632376a44e.jpg',
 
       messeges: [
-        { id: 'A456', messege: 'Hello', time: 'time', proprety: 'friend' },
-        { id: 'A457', messege: 'How are you?', time: 'time', proprety: 'my' },
+        {
+          id: '1',
+          messege: 'Hello , how are you today?',
+          time: '24 Feb, 2022',
+          hours: '01:01 PM',
+          proprety: 'my',
+        },
+        {
+          id: '2',
+          messege:
+            'I was relly glad to see you the last time! I am excited!How are you?',
+          time: '24 Feb, 2022',
+          hours: '01:01 PM',
+          proprety: 'friend',
+        },
+        {
+          id: '3',
+          messege: 'I am to!',
+          time: '24 Feb, 2022',
+          hours: '01:01 PM',
+          proprety: 'my',
+        },
+        {
+          id: '4',
+          messege: 'I am looking forward to hearing from you',
+          time: '24 Feb, 2022',
+          hours: '01:01 PM',
+          proprety: 'my',
+        },
+      ],
+    },
+    {
+      id: '56djjkl687',
+      name: 'Lily',
+      avatar:
+        'https://i.pinimg.com/564x/b3/0d/f7/b30df7ffc3e4c04232325bdf20ab96d5.jpg',
+
+      messeges: [
+        {
+          id: '10',
+          messege: 'Hello , how are you today?',
+          time: '24 Feb, 2022',
+          hours: '01:01 PM',
+          proprety: 'my',
+        },
+        {
+          id: '11',
+          messege:
+            'I was relly glad to see you the last time! I am excited!How are you?',
+          time: '24 Feb, 2022',
+          hours: '01:01 PM',
+          proprety: 'friend',
+        },
+        {
+          id: '12',
+          messege: 'I am to!',
+          time: '24 Feb, 2022',
+          hours: '01:01 PM',
+          proprety: 'my',
+        },
+        {
+          id: '13',
+          messege: 'I am looking forward to hearing from you',
+          time: '24 Feb, 2022',
+          hours: '01:01 PM',
+          proprety: 'my',
+        },
+      ],
+    },
+    {
+      id: 'kllllllf',
+      name: 'Mark',
+      avatar:
+        'https://i.pinimg.com/564x/b0/53/0e/b0530e4c59ec35885038be6915185501.jpg',
+      messeges: [
+        {
+          id: '21',
+          messege: 'Hello , how are you today?',
+          time: '24 Feb, 2022',
+          hours: '01:01 PM',
+          proprety: 'my',
+        },
+        {
+          id: '22',
+          messege:
+            'I was relly glad to see you the last time! I am excited!How are you?',
+          time: '24 Feb, 2022',
+          hours: '01:01 PM',
+          proprety: 'friend',
+        },
+        {
+          id: '23',
+          messege: 'I am to!',
+          time: '24 Feb, 2022',
+          hours: '01:01 PM',
+          proprety: 'my',
+        },
+        {
+          id: '24',
+          messege: 'I am looking forward to hearing from you',
+          time: '24 Feb, 2022',
+          hours: '01:01 PM',
+          proprety: 'my',
+        },
       ],
     },
   ],
