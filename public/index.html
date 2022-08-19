@@ -13,6 +13,10 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
     <title>React App</title>
+    <meta
+      name="google-signin-client_id"
+      content="643525001877-5ncne9jumg4180ucmvo061nn9am22443.apps.googleusercontent.com"
+    />
 
     <script type="text/javascript">
       (function (l) {
@@ -32,9 +36,11 @@
         }
       })(window.location);
     </script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <div className="g-signin2" data-onsuccess="onSignIn"></div>
   </body>
 </html>

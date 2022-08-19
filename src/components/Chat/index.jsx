@@ -6,16 +6,25 @@ import { useDispatch } from 'react-redux';
 import * as actions from '../../redux/actions';
 import { nanoid } from 'nanoid';
 import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+// import { render } from '@testing-library/react';
 
 const Chat = () => {
   const [input, setInput] = useState('');
   const dispatch = useDispatch();
-  const objDiv = document.querySelector(styles.body);
-
+  let messagesEnd;
+  const handleScroll = () => messagesEnd.scrollIntoView({ behavior: 'smooth' });
   let users = useSelector(state => state.persistedReducer.filtered);
   let myavatar =
     'https://i.pinimg.com/564x/87/7e/47/877e4704f794b9537f116ad97a8df9b3.jpg';
   const location = useLocation();
+
+  useEffect(() => {
+    const container = document.getElementsByClassName(styles.body)[0];
+    let height = container.scrollHeight;
+    console.log(height);
+    container.scrollTop = height;
+  }, [handleScroll]);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -39,10 +48,6 @@ const Chat = () => {
         },
       })
     );
-    // objDiv.scrollTop = objDiv.scrollHeight;
-
-    console.log(objDiv);
-
     dispatch(actions.filterContacts(''));
     setInput('');
 
@@ -96,6 +101,12 @@ const Chat = () => {
                   messages={el}
                 />
               ))}
+          <div
+            ref={el => {
+              messagesEnd = el;
+            }}
+            className="ref"
+          ></div>
         </div>
         <form
           className={styles.footer}

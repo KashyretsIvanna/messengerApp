@@ -2,24 +2,30 @@ import Contacts from './Contacts';
 import Chat from './Chat';
 // import { useEffect } from 'react';
 // import jwt_decode from 'jwt-decode';
+// import { gapi } from 'gapi-script';
 
 export const App = () => {
+  
   // function handleCredentialResponse(response) {
   //   console.log(jwt_decode(response.credential));
   // }
-  
+
   // useEffect(() => {
-  //   google.accounts.id.initialize({
+  //   console.log(gapi);
+
+  //   gapi.accounts.id.initialize({
   //     client_id:
-  //       '71848933982-fg672e4995svgotpfiko6moelsbjooc7.apps.googleusercontent.com',
-  //     callback: handleCallbackResponse,
+  //       '643525001877-5ncne9jumg4180ucmvo061nn9am22443.apps.googleusercontent.com',
+  //     callback: handleCredentialResponse,
   //   });
-  //   google.accounts.id.renderButton(document.getElementById('signin'), {
+  //   gapi.accounts.id.renderButton(document.getElementById('signin'), {
   //     theme: 'outline',
   //     size: 'large',
   //   });
-  //   // google.accounts.id.propmpt();
+  //   gapi.accounts.id.propmpt();
   // }, []);
+
+
   return (
     <div
       style={{
@@ -31,6 +37,7 @@ export const App = () => {
       }}
     >
       <div id="signin"></div>
+
       <Contacts />
       <Chat />
     </div>
