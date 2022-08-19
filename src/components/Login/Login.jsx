@@ -5,8 +5,8 @@ import { useEffect } from 'react';
 // import { useDispatch } from 'react-redux';
 // import * as actions from '../../redux/actions';
 
-function Login({getResponse}) {
-//   const dispatch = useDispatch();
+function Login({ getResponse }) {
+  //   const dispatch = useDispatch();
   const clientId =
     '643525001877-5ncne9jumg4180ucmvo061nn9am22443.apps.googleusercontent.com';
 
