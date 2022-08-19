@@ -9,7 +9,10 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <meta name="google-signin-client_id" content="71848933982-fg672e4995svgotpfiko6moelsbjooc7.apps.googleusercontent.com">
+    <meta
+      name="google-signin-client_id"
+      content="71848933982-fg672e4995svgotpfiko6moelsbjooc7.apps.googleusercontent.com"
+    />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -47,37 +50,37 @@
       })(window.location);
     </script>
     <!-- End Single Page Apps for GitHub Pages -->
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <!-- <script>
-      window.onload = function () {
-        google.accounts.id.initialize({
-          client_id: 'YOUR_GOOGLE_CLIENT_ID',
-          callback: handleCredentialResponse,
-        });
-        google.accounts.id.prompt();
-      };
-    </script> -->
+    <script
+      src="https://apis.google.com/js/platform.js?onload=init"
+      async
+      defer
+    ></script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
-    <!-- <script>
-      gapi.load('auth2',function(){
-        gapi.auth2.init()
-      })
-    </script> -->
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <script>
+      gapi.load('auth2', function () {
+        gapi.auth2.init();
+      });
+      if (auth2.isSignedIn.get()) {
+        var profile = auth2.currentUser.get().getBasicProfile();
+        console.log('ID: ' + profile.getId());
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail());
+      }
+      // function onSignIn(googleUser) {
+      //   var profile = googleUser.getBasicProfile();
+      //   console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+      //   console.log('Name: ' + profile.getName());
+      //   console.log('Image URL: ' + profile.getImageUrl());
+      //   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+      // }
+    </script>
   </body>
 </html>
