@@ -1,30 +1,34 @@
 import Contacts from './Contacts';
 import Chat from './Chat';
-// import { useEffect } from 'react';
-// import jwt_decode from 'jwt-decode';
-// import { gapi } from 'gapi-script';
+import { initializeApp } from 'firebase/app';
+import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import * as actions from '../redux/actions';
+import { useDispatch } from 'react-redux';
 
 export const App = () => {
-  
-  // function handleCredentialResponse(response) {
-  //   console.log(jwt_decode(response.credential));
-  // }
+  const dispatch = useDispatch();
+  const firebaseConfig = {
+    apiKey: 'AIzaSyD_2I0rOe795m0l9nXPk3HX5xlvy9GO1Hc',
+    authDomain: 'messanger-5dbc4.firebaseapp.com',
+    projectId: 'messanger-5dbc4',
+    storageBucket: 'messanger-5dbc4.appspot.com',
+    messagingSenderId: '601028869999',
+    appId: '1:601028869999:web:a56b16f40c7aad2370f29a',
+    measurementId: 'G-90BLT3FE4E',
+  };
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const provider = new GoogleAuthProvider();
 
-  // useEffect(() => {
-  //   console.log(gapi);
+  const signInWihGoogle = () => {
+    signInWithPopup(auth, provider)
+      .then(results => {
+        dispatch(actions.setUser(results));
 
-  //   gapi.accounts.id.initialize({
-  //     client_id:
-  //       '643525001877-5ncne9jumg4180ucmvo061nn9am22443.apps.googleusercontent.com',
-  //     callback: handleCredentialResponse,
-  //   });
-  //   gapi.accounts.id.renderButton(document.getElementById('signin'), {
-  //     theme: 'outline',
-  //     size: 'large',
-  //   });
-  //   gapi.accounts.id.propmpt();
-  // }, []);
-
+        console.log(results);
+      })
+      .catch(err => console.log(err));
+  };
 
   return (
     <div
@@ -40,6 +44,7 @@ export const App = () => {
 
       <Contacts />
       <Chat />
+      <button onClick={() => signInWihGoogle()}>Sign</button>
     </div>
   );
 };

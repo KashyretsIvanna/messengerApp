@@ -2,6 +2,7 @@ import * as actions from '../redux/actions';
 import { createReducer } from '@reduxjs/toolkit';
 
 const INITIALSTATE = {
+  user: null,
   contacts: [
     {
       id: '56676',
@@ -180,6 +181,10 @@ const contactReducer = createReducer(INITIALSTATE, {
       },
       ...state.contacts.filter(el => el.id !== action.payload.id),
     ],
+  }),
+  [actions.setUser.type]: (state, action) => ({
+    ...state,
+    user: { ...action.payload.user },
   }),
 });
 

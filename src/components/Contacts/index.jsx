@@ -11,7 +11,8 @@ const Contacts = () => {
   const [input, setInput] = useState('');
   const dispatch = useDispatch();
   let contacts = useSelector(state => state.persistedReducer.filtered);
-  console.log(contacts)
+  const author=useSelector(state=>state.persistedReducer.user)
+  console.log(author)
 
   useEffect(() => {
     dispatch(actions.filterContacts(input));
@@ -20,11 +21,13 @@ const Contacts = () => {
   return (
     <div className={styles.sidebar}>
       <div className={styles.header}>
+        <div>
         <img
           className={styles.profile}
-          src="https://i.pinimg.com/564x/1b/d6/9d/1bd69de67d1889d471bad439f30ed369.jpg"
+          src={author.photoURL}
           alt=""
         />
+        <p>{author.displayName}</p></div>
         <input
           placeholder="Search or start new chat"
           className={styles.filter}
