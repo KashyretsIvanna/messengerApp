@@ -57,7 +57,7 @@ input::placeholder {
   font-family: $font_fam;
   font-size: 20px;
 }
-.change{
+.change {
   width: 150px;
   height: 70px;
   background-color: white;
@@ -66,18 +66,13 @@ input::placeholder {
   font-size: 20px;
   border-radius: 30px;
   position: absolute;
-  
 }
-.author{
-  // display: flex;
-  // flex-wrap: wrap;
-  // align-items: center;
-  // justify-content: space-between;
+.author {
   position: relative;
   width: 100%;
 }
 
-.change{
+.change {
   text-decoration: none;
   color: black;
   background-image: url(https://st2.depositphotos.com/3921439/7919/v/950/depositphotos_79197690-stock-illustration-the-login-icon-entry-and.jpg);
@@ -90,11 +85,10 @@ input::placeholder {
   position: absolute;
   top: 0;
   right: 0;
-  
 }
 
 @media screen and (max-width: 900px) {
-.sidebar{
+  .sidebar {
     width: 100vw;
-}
+  }
 }
