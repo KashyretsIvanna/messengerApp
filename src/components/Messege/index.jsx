@@ -1,5 +1,5 @@
 import styles from '../Messege/index.module.scss';
-
+import PropTypes from 'prop-types';
 const Message = ({ messages, avatar }) => {
   let message = messages.messege;
   let time = messages.hours;
@@ -29,6 +29,11 @@ const Message = ({ messages, avatar }) => {
       )}
     </div>
   );
+};
+
+Message.propTypes = {
+  message: PropTypes.object.isRequired,
+  avatar: PropTypes.string.isRequired,
 };
 
 export default Message;

@@ -60,7 +60,7 @@ function Authorization() {
         className={styles.btn + ' ' + styles.twitter_btn}
         onClick={() => signInWihGoogle(providerGithub)}
       >
-        Sign in with Twitter
+        Sign in with GitHub
       </button>
     </div>
   );

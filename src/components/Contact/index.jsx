@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styles from '../Contact/index.module.scss';
+import PropTypes from "prop-types"
 const Contact = ({ user }) => {
   return (
     <Link
@@ -24,5 +25,11 @@ const Contact = ({ user }) => {
     </Link>
   );
 };
+Contact.propTypes={
+  user:PropTypes.object.isRequired
+
+}
+
+
 
 export default Contact;
