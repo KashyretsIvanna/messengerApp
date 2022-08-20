@@ -57,3 +57,18 @@ input::placeholder {
   font-family: $font_fam;
   font-size: 20px;
 }
+.change{
+  width: 150px;
+  height: 70px;
+  background-color: white;
+  border: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  border-radius: 30px;
+}
+.author{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,0 +1,33 @@
+.google_btn{
+    background-image: url(http://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/62902855-31e8-48de-986e-5080e8ef5f15/d98a35k-b59aab66-48c2-4022-9300-b1f182604a32.png);
+
+}
+.facebook_btn{
+    background-image: url(https://i.ya-webdesign.com/images/facebook-circle-png-5.png);
+}
+.twitter_btn{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Twitter_icon.svg/1200px-Twitter_icon.svg.png);
+}
+.btn {
+  width: 250px;
+  height: 90px;
+  background-color: white;
+  background-position: left center;
+  background-size: 60px;
+  background-repeat: no-repeat;
+  text-align: center;
+  box-shadow: 4px 5px 10px;
+  border: none;
+  padding-left: 50px;
+  margin-bottom: 10px;
+}
+.authorization{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
