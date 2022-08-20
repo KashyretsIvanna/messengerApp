@@ -4,7 +4,7 @@ const Contact = ({ user }) => {
   return (
     <Link
       style={{ color: 'black', textDecoration: 'none' }}
-      to={'contacts/' + user.id}
+      to={'/contacts/' + user.id}
       state={{ from: user.id, user: user }}
     >
       <div className={styles.user_cart}>

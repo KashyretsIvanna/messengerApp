@@ -6,7 +6,7 @@ $myfriend_gray: rgb(79, 78, 78);
 $font_fam: georgia, 'Times New Roman', Times, serif;
 
 .sidebar {
-  width: 30vw;
+  width: 400px;
   height: 100vh;
   border-right: 1px solid $border_gray;
 }
@@ -65,10 +65,36 @@ input::placeholder {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 20px;
   border-radius: 30px;
+  position: absolute;
+  
 }
 .author{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  // display: flex;
+  // flex-wrap: wrap;
+  // align-items: center;
+  // justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.change{
+  text-decoration: none;
+  color: black;
+  background-image: url(https://st2.depositphotos.com/3921439/7919/v/950/depositphotos_79197690-stock-illustration-the-login-icon-entry-and.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  
+}
+
+@media screen and (max-width: 900px) {
+.sidebar{
+    width: 100vw;
+}
 }

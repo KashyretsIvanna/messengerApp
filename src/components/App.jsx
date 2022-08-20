@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 
 export const App = () => {
   const author = useSelector(state => state.persistedReducer.user);
-  console.log('au:', Object.keys(author).length);
+  let getWidth = () => window.innerWidth;
   return (
     <div
       style={{
@@ -18,16 +18,42 @@ export const App = () => {
       }}
     >
       <Routes>
+        {Object.keys(author).length !== 0 && (
+          <Route
+            path="/contacts"
+            element={
+              <>
+                {getWidth() < 900 ? (
+                  <Contacts />
+                ) : (
+                  <>
+                    <Contacts />
+                    <Chat />
+                  </>
+                )}
+              </>
+            }
+          />
+        )}
+        <Route path="/authorization" element={<Authorization />} />
+
         <Route
-          path="/contacts"
+          path="/contacts/:id"
           element={
             <>
-              <Contacts />
-              <Chat />
+              {getWidth() < 900 ? (
+                <Chat />
+              ) : (
+                <>
+                  <Contacts />
+                  <Chat />
+                </>
+              )}
             </>
           }
         />
-        <Route path="/authorization" element={<Authorization />} />
+
+        <Route path="*" element={<Authorization />} />
       </Routes>
     </div>
   );

@@ -8,7 +8,7 @@ $font_size_large: 30px;
 $font_size_small: 20px;
 
 .container {
-  width: 70vw;
+  width: calc(100vw - 400px);
   height: 100vh;
   background-color: $background_dark_gray;
 }
@@ -36,19 +36,15 @@ $font_size_small: 20px;
   width: 100%;
   border-bottom: 1px solid $border_gray;
   height: calc(78vh - 2px);
-  overflow:scroll;
+  overflow: scroll;
   position: relative;
-  
 }
 
 .body::-webkit-scrollbar {
   width: 0px;
   position: absolute;
   bottom: 0px;
-
 }
-
-
 
 .footer {
   display: flex;
@@ -80,4 +76,22 @@ $font_size_small: 20px;
   background-size: contain;
   background-color: rgba(255, 255, 255, 0);
   border-radius: 50%;
+}
+
+.back {
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 50%;
+  background-image: url(https://www.shareicon.net/download/2016/06/08/777703_arrows_512x512.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    width: 100vw;
+  }
 }

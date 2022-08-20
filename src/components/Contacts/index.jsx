@@ -24,16 +24,15 @@ const Contacts = () => {
       <div className={styles.header}>
         <div className={styles.author}>
           <img className={styles.profile} src={author.photoURL} alt="" />
-          <button
+
+          <Link
             onClick={() => {
               dispatch(actions.setUser({ user: {} }));
             }}
             className={styles.change}
-            type="button"
-          >
-            <Link to="/authorization">Change account</Link>
-          </button>
-          <p>{author.displayName}</p>
+            to="/authorization"
+          ></Link>
+          <div>{author.displayName}</div>
         </div>
         <input
           placeholder="Search or start new chat"

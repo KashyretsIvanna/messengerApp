@@ -8,6 +8,7 @@ import { nanoid } from 'nanoid';
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const Chat = () => {
   const [input, setInput] = useState('');
@@ -79,6 +80,7 @@ const Chat = () => {
     <>
       <div className={styles.container}>
         <div className={styles.header}>
+          <Link className={styles.back} to="/contacts"></Link>
           {location.state && (
             <img
               className={styles.logo}
@@ -101,13 +103,6 @@ const Chat = () => {
                 />
               ))}
           <div ref={reference} />
-
-          {/* <div
-            ref={el => {
-              messagesEnd = el;
-            }}
-            className="ref"
-          ></div> */}
         </div>
         <form
           className={styles.footer}
